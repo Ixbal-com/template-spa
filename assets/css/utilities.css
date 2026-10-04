@@ -1,4 +1,10 @@
 /* Clases de una sola responsabilidad. Úsalas con moderación. */
+
+/* El atributo hidden siempre gana, aunque el componente defina su propio display. */
+[hidden] {
+  display: none !important;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

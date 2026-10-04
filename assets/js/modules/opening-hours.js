@@ -1,7 +1,20 @@
-// Lee el horario de la tabla [data-hours] (fuente única de verdad), marca el día
-// de hoy y muestra "Abierto ahora" o "Cerrado" en [data-open-status].
-export function initOpeningHours(now = new Date()) {
-  const table = document.querySelector("[data-hours]");
+// Horarios de apertura. Cada [data-hours-scope] (por ejemplo, una sucursal) tiene su
+// tabla [data-hours] y su aviso [data-open-status]; si no hay ámbitos, usa toda la
+// página. Marca el día de hoy y muestra "Abierto ahora" o "Cerrado". Los textos
+// salen de data-text-open y data-text-closed para que se puedan traducir, y se
+// vuelven a pintar cada minuto y cuando cambia el idioma.
+export function initOpeningHours() {
+  const scopes = document.querySelectorAll("[data-hours-scope]");
+  const render = () => {
+    for (const scope of scopes.length ? scopes : [document]) renderScope(scope, new Date());
+  };
+  render();
+  setInterval(render, 60_000);
+  document.addEventListener("i18n:change", render);
+}
+
+function renderScope(scope, now) {
+  const table = scope.querySelector("[data-hours]");
   if (!table) return;
 
   const today = now.getDay();
@@ -12,13 +25,15 @@ export function initOpeningHours(now = new Date()) {
 
   todayRow?.classList.add("is-today");
 
-  const status = document.querySelector("[data-open-status]");
+  const status = scope.querySelector("[data-open-status]");
   if (!status) return;
 
   const { open, close } = todayRow?.dataset ?? {};
   const isOpen = Boolean(open && close) && minutesNow >= toMinutes(open) && minutesNow < toMinutes(close);
+  const openText = status.dataset.textOpen ?? "Abierto ahora · cierra a las {close}";
+  const closedText = status.dataset.textClosed ?? "Cerrado en este momento";
 
-  status.textContent = isOpen ? `Abierto ahora · cierra a las ${close}` : "Cerrado en este momento";
+  status.textContent = isOpen ? openText.replace("{close}", close) : closedText;
   status.classList.toggle("is-open", isOpen);
   status.hidden = false;
 }

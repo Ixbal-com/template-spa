@@ -19,6 +19,7 @@ for (const file of htmlFiles) {
   checkContactConsistency(file, html);
   checkJsonLd(file, html);
   checkImageSlots(file, html);
+  await checkTranslations(file, html);
 }
 
 for (const file of cssFiles) {
@@ -61,7 +62,7 @@ async function checkLocalReferences(file, text, pattern) {
 }
 
 function checkHtmlBasics(file, html) {
-  if (!/<title>[^<]+<\/title>/.test(html)) errors.push(`${file}: falta <title>.`);
+  if (!/<title\b[^>]*>[^<]+<\/title>/.test(html)) errors.push(`${file}: falta <title>.`);
   if (!/<meta name="description" content="[^"]+"/.test(html)) errors.push(`${file}: falta la meta descripción.`);
   if ((html.match(/<h1[\s>]/g) ?? []).length !== 1) errors.push(`${file}: debe tener exactamente un <h1>.`);
   for (const [tag] of html.matchAll(/<img\b[^>]*>/g)) {
@@ -102,6 +103,42 @@ function checkImageSlots(file, html) {
     if (slotsInHtml.includes(id)) errors.push(`${file}: el espacio de imagen "${id}" está repetido.`);
     slotsInHtml.push(id);
     if (/\sdata-placeholder(?=[\s>=])/.test(tag)) pendingSlots += 1;
+  }
+}
+
+// Idiomas extra: <html data-languages="es,en"> y un i18n/<idioma>.json por cada uno
+// después del primero, con exactamente las claves de data-i18n y data-i18n-attr.
+async function checkTranslations(file, html) {
+  const languages = html.match(/<html\b[^>]*\sdata-languages="([^"]+)"/)?.[1].split(",").map((lang) => lang.trim()) ?? [];
+  if (languages.length < 2) return;
+
+  const keys = new Set([...html.matchAll(/\sdata-i18n="([^"]+)"/g)].map(([, key]) => key));
+  for (const [, list] of html.matchAll(/\sdata-i18n-attr="([^"]+)"/g)) {
+    for (const pair of list.split(";")) {
+      const key = pair.split(":")[1]?.trim();
+      if (key) keys.add(key);
+    }
+  }
+  const whatsappNumbers = new Set([...html.matchAll(/wa\.me\/(\d+)/g)].map(([, number]) => number));
+
+  for (const lang of languages.slice(1)) {
+    const name = `i18n/${lang}.json`;
+    let dictionary;
+    try {
+      dictionary = JSON.parse(await readFile(join(root, name), "utf8"));
+    } catch (error) {
+      errors.push(`${name}: no existe o no es JSON válido (${error.message}).`);
+      continue;
+    }
+    for (const key of keys) {
+      if (typeof dictionary[key] !== "string") errors.push(`${name}: falta la traducción de "${key}".`);
+    }
+    for (const [key, value] of Object.entries(dictionary)) {
+      if (!keys.has(key)) errors.push(`${name}: la clave "${key}" no se usa en ${file}.`);
+      for (const [, number] of String(value).matchAll(/wa\.me\/(\d+)/g)) {
+        if (!whatsappNumbers.has(number)) errors.push(`${name}: "${key}" usa un WhatsApp distinto (${number}).`);
+      }
+    }
   }
 }
 
