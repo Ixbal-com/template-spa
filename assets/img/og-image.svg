@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fbf8f6"/>
+  <circle cx="1000" cy="315" r="240" fill="#f4e9e5"/>
+  <circle cx="1000" cy="315" r="150" fill="none" stroke="#6f8269" stroke-width="2"/>
+  <text x="80" y="290" fill="#3a3431" font-family="Georgia, serif" font-size="100" font-weight="300">Jacaranda Spa</text>
+  <text x="84" y="375" fill="#93605a" font-family="Georgia, serif" font-size="42" font-style="italic">Bienestar en Providencia, Guadalajara</text>
+</svg>

@@ -1,0 +1,213 @@
+{
+  "id": "spa",
+  "name": "Spa / Bienestar",
+  "version": "1.0.0",
+  "category": "belleza-bienestar",
+  "style": "Suave minimalista: rosa empolvado y salvia, mucho espacio en blanco; títulos en serif fina (Cormorant Garamond).",
+  "description": "Para spas, centros de masajes, estéticas y consultorios de bienestar que reciben citas por WhatsApp.",
+  "tags": [
+    "spa",
+    "masajes",
+    "faciales",
+    "paquetes",
+    "citas",
+    "whatsapp"
+  ],
+  "entry": "index.html",
+  "preview": "preview.png",
+  "sections": [
+    "encabezado",
+    "hero",
+    "tratamientos",
+    "paquetes",
+    "experiencia",
+    "equipo",
+    "opiniones",
+    "preguntas",
+    "visitanos",
+    "pie"
+  ],
+  "imageSlots": [
+    {
+      "id": "hero",
+      "label": "Foto principal: cabina o área de relajación (panorámica)",
+      "ratio": "21:9 en escritorio, 4:5 en móvil",
+      "recommended": "1600 × 1067 px",
+      "section": "hero"
+    },
+    {
+      "id": "tratamiento-1",
+      "label": "Tratamiento destacado 1",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "tratamientos"
+    },
+    {
+      "id": "tratamiento-2",
+      "label": "Tratamiento destacado 2",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "tratamientos"
+    },
+    {
+      "id": "tratamiento-3",
+      "label": "Tratamiento destacado 3",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "tratamientos"
+    },
+    {
+      "id": "espacio",
+      "label": "Sala de relajación o recepción",
+      "ratio": "4:5",
+      "recommended": "1200 × 1500 px",
+      "section": "experiencia"
+    },
+    {
+      "id": "equipo-1",
+      "label": "Retrato de terapeuta 1 (se muestra en círculo)",
+      "ratio": "1:1",
+      "recommended": "800 × 800 px",
+      "section": "equipo"
+    },
+    {
+      "id": "equipo-2",
+      "label": "Retrato de terapeuta 2 (se muestra en círculo)",
+      "ratio": "1:1",
+      "recommended": "800 × 800 px",
+      "section": "equipo"
+    },
+    {
+      "id": "equipo-3",
+      "label": "Retrato de terapeuta 3 (se muestra en círculo)",
+      "ratio": "1:1",
+      "recommended": "800 × 800 px",
+      "section": "equipo"
+    }
+  ],
+  "fields": [
+    {
+      "id": "businessName",
+      "label": "Nombre del spa",
+      "type": "text",
+      "required": true,
+      "example": "Jacaranda Spa"
+    },
+    {
+      "id": "tagline",
+      "label": "¿Qué ofreces y dónde?",
+      "type": "text",
+      "required": true,
+      "example": "Masajes y faciales en Guadalajara"
+    },
+    {
+      "id": "description",
+      "label": "Describe tu spa en una o dos frases",
+      "type": "textarea",
+      "required": true,
+      "example": "Spa de día en Providencia con masajes, faciales y rituales en pareja."
+    },
+    {
+      "id": "whatsapp",
+      "label": "WhatsApp para citas (con lada)",
+      "type": "phone",
+      "required": true,
+      "example": "+52 33 2468 1357"
+    },
+    {
+      "id": "phone",
+      "label": "Teléfono",
+      "type": "phone",
+      "required": false,
+      "example": "+52 33 2468 1357"
+    },
+    {
+      "id": "email",
+      "label": "Correo",
+      "type": "email",
+      "required": false,
+      "example": "hola@jacarandaspa.mx"
+    },
+    {
+      "id": "address",
+      "label": "Dirección",
+      "type": "text",
+      "required": true,
+      "example": "Calle Rubén Darío 1180, Providencia, Guadalajara, Jalisco"
+    },
+    {
+      "id": "featuredTreatments",
+      "label": "Tratamientos destacados (nombre, duración, precio y descripción)",
+      "type": "list",
+      "required": true,
+      "min": 1,
+      "max": 3
+    },
+    {
+      "id": "treatments",
+      "label": "Carta de tratamientos por categoría (nombre, duración y precio)",
+      "type": "list",
+      "required": true
+    },
+    {
+      "id": "packages",
+      "label": "Paquetes (nombre, precio, duración e incluye)",
+      "type": "list",
+      "required": false,
+      "max": 3
+    },
+    {
+      "id": "team",
+      "label": "Equipo (nombre y especialidad)",
+      "type": "list",
+      "required": false,
+      "max": 6
+    },
+    {
+      "id": "hours",
+      "label": "Horario",
+      "type": "hours",
+      "required": true
+    },
+    {
+      "id": "promo",
+      "label": "Promoción para primera visita",
+      "type": "text",
+      "required": false,
+      "example": "15% de descuento en tu primer masaje de lunes a jueves"
+    },
+    {
+      "id": "testimonials",
+      "label": "Opiniones de clientes",
+      "type": "list",
+      "required": false,
+      "max": 6
+    },
+    {
+      "id": "faq",
+      "label": "Preguntas frecuentes",
+      "type": "list",
+      "required": false,
+      "max": 8
+    },
+    {
+      "id": "brandColor",
+      "label": "Color principal",
+      "type": "color",
+      "required": false,
+      "example": "#93605a"
+    },
+    {
+      "id": "logo",
+      "label": "Logo",
+      "type": "image",
+      "required": false
+    },
+    {
+      "id": "social",
+      "label": "Redes sociales",
+      "type": "links",
+      "required": false
+    }
+  ]
+}

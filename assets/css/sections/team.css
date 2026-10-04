@@ -1,0 +1,21 @@
+.team-member {
+  text-align: center;
+}
+
+.team-member .media {
+  border-radius: var(--radius-full);
+  max-width: 16rem;
+  margin-inline: auto;
+}
+
+.team-member__name {
+  margin-top: var(--space-6);
+  font-size: var(--text-xl);
+}
+
+.team-member__role {
+  margin-top: var(--space-1);
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}

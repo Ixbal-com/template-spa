@@ -1,0 +1,110 @@
+/* Texto centrado arriba y una foto panorámica debajo. */
+.hero {
+  padding-block: var(--space-16) var(--space-section);
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50rem;
+  margin-inline: auto;
+}
+
+.hero__title {
+  font-size: var(--text-3xl);
+  font-weight: 300;
+}
+
+.hero__title em {
+  font-style: italic;
+  color: var(--color-primary);
+}
+
+.hero__lead {
+  max-width: 34rem;
+  margin-top: var(--space-6);
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.hero__visual {
+  position: relative;
+  margin-top: var(--space-16);
+}
+
+.hero__visual .media {
+  --media-ratio: 4 / 5;
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 48rem) {
+  .hero__visual .media {
+    --media-ratio: 21 / 9;
+  }
+}
+
+.hero__note {
+  position: absolute;
+  right: var(--space-6);
+  bottom: var(--space-6);
+  max-width: 16rem;
+  padding: var(--space-4) var(--space-6);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+  font-size: var(--text-sm);
+  text-align: left;
+}
+
+@media (max-width: 47.99rem) {
+  .hero__note {
+    position: static;
+    max-width: none;
+    margin-top: var(--space-4);
+    box-shadow: none;
+  }
+}
+
+.hero__note strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 500;
+  color: var(--color-primary);
+}
+
+/* Lo muestra main.js según el horario de la sección "Visítanos" */
+.status-badge {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+  padding: var(--space-1) var(--space-4);
+  border-radius: var(--radius-full);
+  background: var(--color-accent-soft);
+  font-size: var(--text-sm);
+  font-weight: 400;
+}
+
+.status-badge::before {
+  content: "";
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: var(--radius-full);
+  background: var(--color-danger);
+}
+
+.status-badge.is-open::before {
+  background: var(--color-success);
+}

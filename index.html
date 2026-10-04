@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO: título y descripción que aparecen en Google -->
+  <title>Jacaranda Spa · Masajes y faciales en Guadalajara</title>
+  <meta name="description" content="Spa de día en Providencia, Guadalajara. Masajes, faciales, rituales en pareja y paquetes de día completo. Agenda tu cita por WhatsApp.">
+  <meta name="theme-color" content="#93605a">
+
+  <!-- Vista previa al compartir en WhatsApp y redes sociales -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Jacaranda Spa · Masajes y faciales en Guadalajara">
+  <meta property="og:description" content="Un respiro en medio de la ciudad: masajes, faciales y rituales en Providencia.">
+  <meta property="og:image" content="assets/img/og-image.svg">
+  <meta property="og:locale" content="es_MX">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500&display=swap">
+
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script type="module" src="assets/js/main.js"></script>
+
+  <!-- Datos estructurados para Google Maps y búsquedas locales -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "DaySpa",
+    "name": "Jacaranda Spa",
+    "description": "Spa de día con masajes, faciales y rituales en pareja.",
+    "priceRange": "$$$",
+    "telephone": "+52 33 2468 1357",
+    "email": "hola@jacarandaspa.mx",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Rubén Darío 1180, Providencia",
+      "addressLocality": "Guadalajara",
+      "addressRegion": "Jalisco",
+      "postalCode": "44630",
+      "addressCountry": "MX"
+    },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "10:00", "closes": "20:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "16:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ ENCABEZADO ============ -->
+  <header class="site-header" data-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="#inicio" aria-label="Jacaranda Spa, ir al inicio">
+        <img class="brand__logo" src="assets/img/logo.svg" alt="" width="40" height="40">
+        <span class="brand__name">Jacaranda Spa</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" data-nav-toggle>
+        <span class="visually-hidden">Abrir menú</span>
+        <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#menu"></use></svg>
+      </button>
+
+      <nav class="site-nav" id="menu-principal" aria-label="Principal" data-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="#tratamientos">Tratamientos</a></li>
+          <li><a class="site-nav__link" href="#paquetes">Paquetes</a></li>
+          <li><a class="site-nav__link" href="#experiencia">Tu visita</a></li>
+          <li><a class="site-nav__link" href="#equipo">Equipo</a></li>
+          <li><a class="site-nav__link" href="#visitanos">Visítanos</a></li>
+        </ul>
+        <a class="button button--primary button--sm" href="https://wa.me/523324681357?text=Hola%2C%20quiero%20agendar%20una%20cita" data-contact="whatsapp" target="_blank" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#calendar"></use></svg>
+          Agendar
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container">
+        <div class="hero__content">
+          <p class="status-badge" data-open-status hidden></p>
+          <p class="eyebrow">Spa de día · Providencia, Guadalajara</p>
+          <h1 class="hero__title">Un respiro <em>en medio de la ciudad</em></h1>
+          <p class="hero__lead">Masajes, faciales y rituales pensados para que salgas más ligera de lo que llegaste. Sin prisas, sin ruido.</p>
+          <div class="hero__actions">
+            <a class="button button--primary button--lg" href="https://wa.me/523324681357?text=Hola%2C%20quiero%20agendar%20una%20cita" data-contact="whatsapp" target="_blank" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+              Agendar por WhatsApp
+            </a>
+            <a class="button button--outline button--lg" href="#tratamientos">Ver tratamientos</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <figure class="media media--wide" data-slot="hero">
+            <img src="images/hero.jpg" alt="Cabina de masaje de Jacaranda Spa con luz natural, plantas y vista a Guadalajara" width="1536" height="1024" fetchpriority="high">
+          </figure>
+          <p class="hero__note"><strong>Primera visita</strong>15% de descuento en tu primer masaje de lunes a jueves.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRATAMIENTOS ============ -->
+    <section class="section section--muted" id="tratamientos" aria-labelledby="tratamientos-titulo">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <p class="eyebrow">Tratamientos</p>
+          <h2 class="section__title" id="tratamientos-titulo">Elige cómo <em>quieres sentirte</em></h2>
+          <p class="section__lead">Usamos aceites orgánicos y productos de cosmética mexicana libre de crueldad.</p>
+        </header>
+
+        <!-- Para destacar otro tratamiento, copia un <li class="featured-treatment"> y agrega su espacio en imageSlots -->
+        <ul class="grid grid--3">
+          <li class="featured-treatment">
+            <figure class="media media--portrait" data-slot="tratamiento-1">
+              <img src="images/tratamiento-1.jpg" alt="Terapeuta preparando piedras calientes de basalto para un masaje" width="1024" height="1536" loading="lazy">
+            </figure>
+            <h3 class="featured-treatment__title">Piedras calientes</h3>
+            <p class="featured-treatment__text">Piedras de basalto tibias que sueltan la tensión profunda de espalda y cuello.</p>
+            <p class="featured-treatment__meta"><span>90 min</span><span>$1,550</span></p>
+          </li>
+          <li class="featured-treatment">
+            <figure class="media media--portrait" data-slot="tratamiento-2">
+              <img src="images/tratamiento-2.jpg" alt="Clienta recibiendo un facial con mascarilla de rosa" width="1024" height="1536" loading="lazy">
+            </figure>
+            <h3 class="featured-treatment__title">Facial de rosa mosqueta</h3>
+            <p class="featured-treatment__text">Limpieza profunda, mascarilla hidratante y masaje facial para una piel luminosa.</p>
+            <p class="featured-treatment__meta"><span>60 min</span><span>$1,200</span></p>
+          </li>
+          <li class="featured-treatment">
+            <figure class="media media--portrait" data-slot="tratamiento-3">
+              <img src="images/tratamiento-3.jpg" alt="Exfoliante de café y cacao en cuenco de cerámica" width="1024" height="1536" loading="lazy">
+            </figure>
+            <h3 class="featured-treatment__title">Exfoliación de café y cacao</h3>
+            <p class="featured-treatment__text">Café de Chiapas y cacao para renovar la piel, con envoltura hidratante.</p>
+            <p class="featured-treatment__meta"><span>45 min</span><span>$850</span></p>
+          </li>
+        </ul>
+
+        <!-- Carta completa: copia un <li class="treatment-list__item"> dentro de su categoría -->
+        <div class="treatment-menu">
+          <section aria-labelledby="carta-masajes">
+            <h3 class="treatment-menu__title" id="carta-masajes">Masajes</h3>
+            <ul class="treatment-list">
+              <li class="treatment-list__item"><span class="treatment-list__name">Relajante</span><span class="treatment-list__price">$1,100</span><span class="treatment-list__duration">60 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Tejido profundo</span><span class="treatment-list__price">$1,250</span><span class="treatment-list__duration">60 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Piedras calientes</span><span class="treatment-list__price">$1,550</span><span class="treatment-list__duration">90 min</span></li>
+            </ul>
+          </section>
+          <section aria-labelledby="carta-faciales">
+            <h3 class="treatment-menu__title" id="carta-faciales">Faciales</h3>
+            <ul class="treatment-list">
+              <li class="treatment-list__item"><span class="treatment-list__name">Facial express</span><span class="treatment-list__price">$650</span><span class="treatment-list__duration">30 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Rosa mosqueta</span><span class="treatment-list__price">$1,200</span><span class="treatment-list__duration">60 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Radiofrecuencia</span><span class="treatment-list__price">$1,400</span><span class="treatment-list__duration">60 min</span></li>
+            </ul>
+          </section>
+          <section aria-labelledby="carta-corporales">
+            <h3 class="treatment-menu__title" id="carta-corporales">Corporales</h3>
+            <ul class="treatment-list">
+              <li class="treatment-list__item"><span class="treatment-list__name">Café y cacao</span><span class="treatment-list__price">$850</span><span class="treatment-list__duration">45 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Envoltura de arcilla</span><span class="treatment-list__price">$1,050</span><span class="treatment-list__duration">60 min</span></li>
+              <li class="treatment-list__item"><span class="treatment-list__name">Drenaje linfático</span><span class="treatment-list__price">$1,150</span><span class="treatment-list__duration">60 min</span></li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAQUETES ============ -->
+    <section class="section" id="paquetes" aria-labelledby="paquetes-titulo">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <p class="eyebrow">Paquetes</p>
+          <h2 class="section__title" id="paquetes-titulo">Para regalar <em>o regalarte</em></h2>
+        </header>
+
+        <ul class="grid grid--3">
+          <li class="card package">
+            <h3 class="package__title">Pausa</h3>
+            <p class="package__price">$1,800 <small>· 2 horas</small></p>
+            <ul class="package__list">
+              <li>Masaje relajante de 60 min</li>
+              <li>Facial express</li>
+              <li>Té de bienvenida</li>
+            </ul>
+            <a class="button button--outline" href="https://wa.me/523324681357?text=Hola%2C%20me%20interesa%20el%20paquete%20Pausa" data-contact="whatsapp" target="_blank" rel="noopener">Agendar</a>
+          </li>
+          <li class="card package package--featured">
+            <span class="package__badge">El más pedido</span>
+            <h3 class="package__title">Ritual en pareja</h3>
+            <p class="package__price">$3,900 <small>· 2 ½ horas</small></p>
+            <ul class="package__list">
+              <li>Masaje en cabina doble</li>
+              <li>Exfoliación de café y cacao</li>
+              <li>Tina de hidromasaje</li>
+              <li>Copa de espumoso y fruta</li>
+            </ul>
+            <a class="button button--primary" href="https://wa.me/523324681357?text=Hola%2C%20me%20interesa%20el%20Ritual%20en%20pareja" data-contact="whatsapp" target="_blank" rel="noopener">Agendar</a>
+          </li>
+          <li class="card package">
+            <h3 class="package__title">Día completo</h3>
+            <p class="package__price">$4,600 <small>· 5 horas</small></p>
+            <ul class="package__list">
+              <li>Masaje con piedras calientes</li>
+              <li>Facial de rosa mosqueta</li>
+              <li>Envoltura de arcilla</li>
+              <li>Comida ligera y acceso al vapor</li>
+            </ul>
+            <a class="button button--outline" href="https://wa.me/523324681357?text=Hola%2C%20me%20interesa%20el%20paquete%20D%C3%ADa%20completo" data-contact="whatsapp" target="_blank" rel="noopener">Agendar</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TU VISITA ============ -->
+    <section class="section section--muted" id="experiencia" aria-labelledby="experiencia-titulo">
+      <div class="container split">
+        <figure class="media media--portrait" data-slot="espacio">
+          <img src="images/espacio.jpg" alt="Sala de relajación con camastros, té y plantas" width="1024" height="1536" loading="lazy">
+        </figure>
+        <div class="split__content">
+          <p class="eyebrow">Tu visita</p>
+          <h2 class="section__title" id="experiencia-titulo">Todo empieza <em>antes del masaje</em></h2>
+          <p>Te recomendamos llegar 20 minutos antes para disfrutar el espacio sin reloj.</p>
+          <ol class="steps">
+            <li class="steps__item">
+              <div>
+                <h3 class="steps__title">Llegada y té</h3>
+                <p class="steps__text">Te recibimos con una infusión de la casa y un breve cuestionario de bienestar.</p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div>
+                <h3 class="steps__title">Tu tratamiento</h3>
+                <p class="steps__text">Tu terapeuta ajusta la presión, los aromas y la música a lo que necesitas.</p>
+              </div>
+            </li>
+            <li class="steps__item">
+              <div>
+                <h3 class="steps__title">Relajación</h3>
+                <p class="steps__text">Al terminar, quédate el tiempo que quieras en la sala de descanso.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EQUIPO ============ -->
+    <section class="section" id="equipo" aria-labelledby="equipo-titulo">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <p class="eyebrow">Equipo</p>
+          <h2 class="section__title" id="equipo-titulo">Manos <em>que saben escuchar</em></h2>
+        </header>
+
+        <ul class="grid grid--3">
+          <li class="team-member">
+            <figure class="media media--square" data-slot="equipo-1">
+              <img src="images/equipo-1.jpg" alt="Retrato de Mariana Robles, masoterapeuta" width="1024" height="1024" loading="lazy">
+            </figure>
+            <h3 class="team-member__name">Mariana Robles</h3>
+            <p class="team-member__role">Masoterapeuta · 12 años</p>
+          </li>
+          <li class="team-member">
+            <figure class="media media--square" data-slot="equipo-2">
+              <img src="images/equipo-2.jpg" alt="Retrato de Sofía Navarro, cosmetóloga" width="1024" height="1024" loading="lazy">
+            </figure>
+            <h3 class="team-member__name">Sofía Navarro</h3>
+            <p class="team-member__role">Cosmetóloga · faciales</p>
+          </li>
+          <li class="team-member">
+            <figure class="media media--square" data-slot="equipo-3">
+              <img src="images/equipo-3.jpg" alt="Retrato de Andrea Villaseñor, terapeuta holística" width="1024" height="1024" loading="lazy">
+            </figure>
+            <h3 class="team-member__name">Andrea Villaseñor</h3>
+            <p class="team-member__role">Terapeuta holística</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ OPINIONES ============ -->
+    <section class="section section--muted" id="opiniones" aria-labelledby="opiniones-titulo">
+      <div class="container">
+        <header class="section__header section__header--center">
+          <p class="eyebrow">Opiniones</p>
+          <h2 class="section__title" id="opiniones-titulo">Así <em>salen nuestras clientas</em></h2>
+          <p class="rating-summary"><strong>4.9</strong> de 5 en Google</p>
+        </header>
+
+        <ul class="grid grid--3">
+          <li class="testimonial">
+            <span class="testimonial__stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <blockquote class="testimonial__quote">“El masaje con piedras calientes es otro nivel. Salí flotando.”</blockquote>
+            <p class="testimonial__author">Karla Gómez <span class="testimonial__meta">· Zapopan</span></p>
+          </li>
+          <li class="testimonial">
+            <span class="testimonial__stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <blockquote class="testimonial__quote">“Le regalé el ritual en pareja a mi esposo y ahora vamos cada aniversario.”</blockquote>
+            <p class="testimonial__author">Paola Ramírez <span class="testimonial__meta">· Chapalita</span></p>
+          </li>
+          <li class="testimonial">
+            <span class="testimonial__stars" aria-label="5 de 5 estrellas">★★★★★</span>
+            <blockquote class="testimonial__quote">“Un lugar precioso y silencioso. Sofía me dejó la piel increíble.”</blockquote>
+            <p class="testimonial__author">Fernanda Ortiz <span class="testimonial__meta">· Providencia</span></p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS FRECUENTES ============ -->
+    <section class="section" id="preguntas" aria-labelledby="preguntas-titulo">
+      <div class="container container--narrow">
+        <header class="section__header section__header--center">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section__title" id="preguntas-titulo">Antes de tu cita</h2>
+        </header>
+
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">¿Qué tengo que llevar?</summary>
+            <p class="faq__answer">Nada. Te damos bata, sandalias, toallas y todo lo necesario para tu tratamiento.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Puedo cambiar o cancelar mi cita?</summary>
+            <p class="faq__answer">Sí, sin costo avisando con 24 horas de anticipación por WhatsApp.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Atienden a embarazadas?</summary>
+            <p class="faq__answer">Sí, a partir del segundo trimestre tenemos un masaje prenatal con camilla especial.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">¿Venden tarjetas de regalo?</summary>
+            <p class="faq__answer">Sí, de cualquier monto o paquete. Te la enviamos digital al momento o impresa en sobre.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ VISÍTANOS: DIRECCIÓN Y HORARIOS ============ -->
+    <section class="section section--muted" id="visitanos" aria-labelledby="visitanos-titulo">
+      <div class="container contact">
+        <div class="contact__info">
+          <p class="eyebrow">Visítanos</p>
+          <h2 class="section__title" id="visitanos-titulo">Te esperamos en <em>Providencia</em></h2>
+
+          <ul class="contact-list">
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#pin"></use></svg>
+              <span>Calle Rubén Darío 1180, Providencia, Guadalajara, Jalisco</span>
+            </li>
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#phone"></use></svg>
+              <a href="tel:+523324681357" data-contact="phone">33 2468 1357</a>
+            </li>
+            <li class="contact-list__item">
+              <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#mail"></use></svg>
+              <a href="mailto:hola@jacarandaspa.mx">hola@jacarandaspa.mx</a>
+            </li>
+          </ul>
+
+          <!-- Horario: data-days usa 0 = domingo … 6 = sábado; horas en formato 24 h -->
+          <h3 class="contact__subtitle">Horario</h3>
+          <table class="hours" data-hours>
+            <tbody>
+              <tr data-days="1,2,3,4,5,6" data-open="10:00" data-close="20:00">
+                <th scope="row">Lunes a sábado</th>
+                <td>10:00 a 20:00</td>
+              </tr>
+              <tr data-days="0" data-open="10:00" data-close="16:00">
+                <th scope="row">Domingo</th>
+                <td>10:00 a 16:00</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="gift-note">
+            <p><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#gift"></use></svg> ¿Buscas un regalo? Tenemos tarjetas de regalo de cualquier monto.</p>
+            <a class="button button--primary" href="https://wa.me/523324681357?text=Hola%2C%20quiero%20una%20tarjeta%20de%20regalo" data-contact="whatsapp" target="_blank" rel="noopener">Pedir tarjeta de regalo</a>
+          </div>
+        </div>
+
+        <div class="contact__map">
+          <iframe
+            title="Ubicación de Jacaranda Spa en el mapa"
+            src="https://www.google.com/maps?q=Rub%C3%A9n+Dar%C3%ADo+1180+Providencia+Guadalajara+Jalisco&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p class="site-footer__brand">Jacaranda Spa</p>
+      <ul class="social-list">
+        <li><a href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#facebook"></use></svg></a></li>
+        <li><a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#instagram"></use></svg></a></li>
+      </ul>
+      <p>© <span data-current-year>2026</span> Jacaranda Spa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/523324681357?text=Hola%2C%20quiero%20agendar%20una%20cita" data-contact="whatsapp" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg class="icon" aria-hidden="true"><use href="assets/img/icons.svg#whatsapp"></use></svg>
+  </a>
+</body>
+</html>
