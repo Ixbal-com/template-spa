@@ -3,6 +3,7 @@
   "name": "Spa / Bienestar",
   "version": "1.0.0",
   "category": "belleza-bienestar",
+  "uses": ["citas"],
   "style": "Suave minimalista: rosa empolvado y salvia, mucho espacio en blanco; títulos en serif fina (Cormorant Garamond).",
   "description": "Para spas, centros de masajes, estéticas y consultorios de bienestar que reciben citas por WhatsApp.",
   "tags": [
