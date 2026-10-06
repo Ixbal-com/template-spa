@@ -15,6 +15,7 @@
   ],
   "entry": "index.html",
   "preview": "preview.png",
+  "modules": [],
   "sections": [
     "encabezado",
     "hero",
